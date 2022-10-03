@@ -171,6 +171,15 @@ button:hover {
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
+.location_information_reident_status {
+  position: relative;
+  bottom: 300px;
+  width: 140px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #111a2e;
+  border-radius: 0 10px 10px 0;
+}
 
 /* RESPONSIVE */
 
@@ -196,9 +205,19 @@ button:hover {
 /* CONDITIONAL CLASSES */
 
 .dead {
-  color: red;
-  font-weight: 900;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  width: 10px;
+  padding: 10px;
+  bottom: 335px;
+  left: 90px;
 }
 .alive {
-  color: green;
+  border-radius: 50%;
+  background-color: green;
+  position: relative;
+  width: 10px;
+  padding: 10px;  bottom: 335px;
+  left: 100px;
 }

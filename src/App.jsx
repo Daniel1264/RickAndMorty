@@ -8,7 +8,7 @@ import FilterList from './components/FilterList'
 
 function App() {
 
-  // ?SESTATE OF COMPONENTS 
+  // ?STATE OF COMPONENTS 
 // LOCATION
   const [location, Setlocation] = useState('')
   // INPUT CONTROLET
@@ -16,7 +16,7 @@ function App() {
   // BAR OF RESULTS
   const [suggestions, setSuggestions] = useState('')
 
-  // ?PETICION GET HTTP TO AXIOS 
+  // ?PETITION  HTTP OF AXIOS 
 
   useEffect(() => {
     let id = randomNumber(126);

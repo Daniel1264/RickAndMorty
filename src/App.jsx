@@ -4,7 +4,6 @@ import axios from 'axios'
 import Location from './components/Location'
 import randomNumber from './RamdomNumber'
 import FilterList from './components/FilterList'
-import Loading from './components/Loading'
 
 
 function App() {
@@ -58,7 +57,6 @@ function App() {
 
   return (
     <div className="App">
-    <Loading />
     
     {/* HEADER */}
         <div className='card_presentation'>

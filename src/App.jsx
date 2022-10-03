@@ -35,13 +35,13 @@ function App() {
 
 
 // EVENT OF INPUT (LOCALITATION OF CHARACTERS)
-  const handlerSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    setInputText(e.target.value)
+    setInputText(e.target.search.value)
   }
 
   // EVENT OF INPUT AND PETITION (LOCATION SUGGESTIONS)
-  const handlerChangue = (e) => {
+  const handleChange = (e) => {
     if (e.target.value == '') {
       setSuggestions('')
     } else {
@@ -65,8 +65,8 @@ function App() {
 
     {/* FORM FOR RESULTS OF THE API RICK AND MORTY */}
 
-    <form onSubmit={handlerSubmit}>
-      <input type='text' id='search' onChange={handlerChangue} placeholder= 'Escribe la ubicacion o el id' />
+    <form onSubmit={handleSubmit}>
+      <input type='text' id='search' onChange={handleChange} placeholder= 'Escribe la ubicacion o el id' />
       <button className='form_button'>Search</button>
     </form>
 

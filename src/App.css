@@ -105,6 +105,8 @@ button:hover {
 
 /* COMPONENT LOCATION INFORMATION  */
 
+
+
 .location_information {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

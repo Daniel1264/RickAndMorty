@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Location from './components/Location'
 import randomNumber from './RamdomNumber'
-import FilterList from './components/FilterList'
+import Form from './components/Form'
 
 
 function App() {
@@ -65,22 +65,19 @@ function App() {
 
     {/* FORM FOR RESULTS OF THE API RICK AND MORTY */}
 
-    <form onSubmit={handleSubmit}>
-      <input type='text' id='search' onChange={handleChange} placeholder= 'Escribe la ubicacion o el id' />
-      <button className='form_button'>Search</button>
-    </form>
 
-    {/* LIST OF FILTERS OF THE  LOCATIONS */}
-    <FilterList 
-        resultRecoment = {suggestions}
-        setInputText = {setInputText}
-      />
+    <Form 
+      handleSubmit = {handleSubmit}
+      onChange = {handleChange}
+      resultRecoment = {suggestions}
+      setInputText = {setInputText}
+    />
+
       
     {/* COMPONENT LOCATION (INFORMATION OF CHARACTERS ) */}
 
     <Location 
       location = {location}
-      inputText = {inputText}
     />
     </div>
   )

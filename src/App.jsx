@@ -19,12 +19,11 @@ function App() {
   // ?PETICION GET HTTP TO AXIOS 
 
   useEffect(() => {
-    let url;
+    let id = randomNumber(126);
     if(inputText){
-      url = `https://rickandmortyapi.com/api/location/${inputText}`
-    } else {
-      url = `https://rickandmortyapi.com/api/location/${randomNumber(126)}`
-    }
+      id = inputText
+    } 
+    let url = `https://rickandmortyapi.com/api/location/${id}`
       axios.get(url)
       .then(res => Setlocation(res.data))
       .catch(err => console.log(err))
@@ -37,7 +36,8 @@ function App() {
 
 // EVENT OF INPUT (LOCALITATION OF CHARACTERS)
   const handlerSubmit = (e) => {
-    setInputText(e.target.search.value)
+    e.preventDefault()
+    setInputText(e.target.value)
   }
 
   // EVENT OF INPUT AND PETITION (LOCATION SUGGESTIONS)
